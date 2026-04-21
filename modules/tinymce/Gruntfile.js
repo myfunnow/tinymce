@@ -582,7 +582,8 @@ module.exports = function (grunt) {
               'license': 'LGPL-2.1',
               'keywords': keywords,
               'homepage': 'https://www.tiny.cloud/',
-              'bugs': { 'url': 'https://github.com/tinymce/tinymce/issues' }
+              'bugs': { 'url': 'https://github.com/tinymce/tinymce/issues' },
+              ...(packageData.publishConfig ? { 'publishConfig': packageData.publishConfig } : {})
             }));
 
             zip.addData('composer.json', jsonToBuffer({
