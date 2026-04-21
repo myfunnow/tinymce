@@ -572,13 +572,9 @@ module.exports = function (grunt) {
             }));
 
             zip.addData('package.json', jsonToBuffer({
-              'name': 'tinymce',
+              'name': packageData.name,
               'version': packageData.version,
-              'repository': {
-                'type': 'git',
-                'url': 'https://github.com/tinymce/tinymce.git',
-                'directory': 'modules/tinymce'
-              },
+              'repository': packageData.repository,
               'description': 'Web based JavaScript HTML WYSIWYG editor control.',
               'author': 'Tiny Technologies, Inc',
               'main': 'tinymce.js',
