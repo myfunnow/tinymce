@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 1.0.0 - 2026-04-21
+
+This package is a fork of [TinyMCE v5.10.9](https://github.com/tinymce/tinymce/releases/tag/5.10.9) published as `@myfunnow/tinymce` under LGPL-2.1.
+
+### Changed
+- Package renamed from `tinymce` to `@myfunnow/tinymce`
+- Version reset to `1.0.0` (upstream base: TinyMCE 5.10.9)
+- Repository URL updated to `https://github.com/myfunnow/tinymce`
+- `publishConfig` set to GitHub Packages registry
+- Gruntfile: `component-dir` task added to output unpacked build directory alongside zip
+
 ## 5.10.9 - 2023-11-15
 
 ### Changed

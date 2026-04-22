@@ -1,3 +1,16 @@
+@myfunnow/tinymce
+=================
+
+A fork of [TinyMCE v5.10.9](https://github.com/tinymce/tinymce/releases/tag/5.10.9) maintained by FunNow Inc., published as `@myfunnow/tinymce@1.0.0` under LGPL-2.1.
+
+| | |
+|---|---|
+| Upstream | TinyMCE 5.10.9 |
+| License | LGPL-2.1 |
+| Registry | GitHub Packages (`@myfunnow`) |
+
+---
+
 TinyMCE - JavaScript Library for Rich Text Editing
 ===================================================
 
