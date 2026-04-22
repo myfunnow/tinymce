@@ -1,5 +1,41 @@
 # TinyMCE
 
+## FunNow Fork Notice
+
+This is a fork of [TinyMCE v5.10.9](https://github.com/tinymce/tinymce/releases/tag/5.10.9)
+maintained by FunNow Inc. and published as `@myfunnow/tinymce` on GitHub Packages.
+
+### License
+
+LGPL-2.1. Modifications made by FunNow are documented in
+[`modules/tinymce/CHANGES.md`](modules/tinymce/CHANGES.md).
+
+### Package
+
+| | |
+|---|---|
+| Package | `@myfunnow/tinymce@1.0.0` |
+| Upstream | TinyMCE 5.10.9 |
+| Registry | GitHub Packages |
+| Branch | `myfunnow-v5` (default) |
+
+### Build & Publish
+
+```bash
+# Build (requires Node 14-16 and Yarn)
+yarn install
+yarn build
+
+# Publish to GitHub Packages
+cd modules/tinymce/dist/tinymce_1.0.0_component
+npm publish
+```
+
+> Do not merge from `main` — it contains upstream v6/v7 code under a different license.
+
+---
+
+
 The world's #1 open source rich text editor.
 
 **Using an old version of TinyMCE?** We recommend you to upgrade to TinyMCE 6 to continue receiving security updates, or consider [TinyMCE 5 LTS](https://www.tiny.cloud/long-term-support/) if you need more time to upgrade.
