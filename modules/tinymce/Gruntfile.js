@@ -885,6 +885,20 @@ module.exports = function (grunt) {
     grunt.file.write('dist/version.txt', BUILD_VERSION);
   });
 
+  grunt.registerTask('component-dir', 'Outputs an unpacked component directory alongside the zip', function () {
+    const execSync = require('child_process').execSync;
+    const zipFile = 'dist/tinymce_' + packageData.version + '_component.zip';
+    const outDir = 'dist/tinymce_' + packageData.version + '_component';
+    if (!grunt.file.exists(zipFile)) {
+      grunt.fail.fatal('Component zip not found: ' + zipFile);
+    }
+    if (grunt.file.exists(outDir)) {
+      grunt.file.delete(outDir, { force: true });
+    }
+    execSync('unzip -q "' + zipFile + '" -d "' + outDir + '"');
+    grunt.log.writeln('Component directory written to: ' + outDir);
+  });
+
   require('load-grunt-tasks')(grunt, {
     requireResolution: true,
     config: "../../package.json",
@@ -909,6 +923,7 @@ module.exports = function (grunt) {
     'prodBuild',
     'clean:release',
     'moxiezip',
+    'component-dir',
     'nugetpack',
     'symlink-dist',
     'version'
